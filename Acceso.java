@@ -42,4 +42,4 @@ public class Acceso
     {
         return minutos;
     }
-}
+}public void fun1A()
