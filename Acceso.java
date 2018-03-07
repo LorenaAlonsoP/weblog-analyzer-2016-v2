@@ -5,6 +5,9 @@ public class Acceso
     private int dia;
     private int hora;
     private int minutos;
+    private String paginaWeb;
+    private String direccionIP;
+    private String codigo;
     
     public Acceso(int ano, int mes, int dia, int hora, int minutos)
     {
