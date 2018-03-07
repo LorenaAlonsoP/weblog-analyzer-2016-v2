@@ -9,37 +9,72 @@ public class Acceso
     private String direccionIP;
     private String codigo;
     
-    public Acceso(int ano, int mes, int dia, int hora, int minutos)
+    /**
+     * Constructor para objetos de la clase Acceso..
+     */
+    public Acceso(String datosDeAccesoAlServidor)
     {
-        this.ano = ano;
-        this.mes = mes;
-        this.dia = dia;
-        this.hora = hora;
-        this.minutos = minutos;
+        String[] datosDeAccesoSeparados = datosDeAccesoAlServidor.split(" ");
+        ano = Integer.parseInt(datosDeAccesoSeparados[1].substring(1,5));
+        mes = Integer.parseInt(datosDeAccesoSeparados[2]);
+        dia = Integer.parseInt(datosDeAccesoSeparados[3]);
+        hora = Integer.parseInt(datosDeAccesoSeparados[4]);
+        minutos = Integer.parseInt(datosDeAccesoSeparados[5].substring(0,2));
+        paginaWeb = datosDeAccesoSeparados[6];
+        direccionIP = datosDeAccesoSeparados[0];
+        codigo = datosDeAccesoSeparados[7];
     }
     
+    /**
+     */
     public int getAno() 
     {
         return ano;
     }
     
+    /**
+     */    
     public int getMes()
     {
         return mes;
     }
     
+    /**
+     */    
     public int getDia()
     {
         return dia;
     }
     
+    /**
+     */    
     public int getHora()
     {
         return hora;
     }
     
+    /**
+     */    
     public int getMinutos()
     {
         return minutos;
     }
-}public void fun1A()
+    
+    /**
+     */
+    public String getPaginaWeb() {
+        return paginaWeb;
+    }
+    
+    /**
+     */
+    public String getDireccionIP() {
+        return direccionIP;
+    }
+    
+    /**
+     */
+    public String getCodigo() {
+        return codigo;
+    }    
+}public void fun1B()
